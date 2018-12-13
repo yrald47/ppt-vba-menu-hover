@@ -1,0 +1,28 @@
+Sub changeText(oshp As shape)
+Dim osld As Slide
+Dim otxtR As TextRange
+Set osld = oshp.Parent
+Set otxtR = osld.Shapes("text").TextFrame.TextRange
+otxtR = oshp.AlternativeText
+End Sub
+
+Sub changePic(oshp As shape)
+Dim osld As Slide
+Set osld = oshp.Parent
+osld.Shapes("ltkGambar").Fill.UserPicture (ActivePresentation.Path & "\" & oshp.Name & ".png")
+End Sub
+
+Sub Underline(oshp As shape)
+    Dim osld As Slide
+    Set osld = oshp.Parent
+    Dim myArray() As Variant, myRange As Object
+    myArray = Array("form", "about", "enemy")
+    Set myRange = osld.Shapes.Range(myArray)
+    myRange.Fill.ForeColor.RGB = RGB(237, 125, 49)
+    For i = 0 To UBound(myArray)
+        If oshp.Name = myArray(i) Then
+            oshp.Fill.ForeColor.RGB = RGB(255, 217, 102)
+        End If
+    Next i
+End Sub
+
