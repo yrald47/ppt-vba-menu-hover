@@ -1,6 +1,7 @@
 ﻿# ppt-vba-menu-hover
 ﻿# What is this ?
-powerpoint for more interactive presentations with VBA
+ ﻿# What is this ?
+> powerpoint for more interactive presentations with VBA
 
 ﻿# What are some examples?
 1. Sidebar Menu changes color when touched by the cursor
